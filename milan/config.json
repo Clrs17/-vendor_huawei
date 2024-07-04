@@ -1,0 +1,116 @@
+{
+  "product_name": "milan",
+  "device_company": "huawei",
+  "device_build_path": "device/board/huawei/milan",
+  "target_cpu": "arm64",
+  "type": "standard",
+  "version": "3.0",
+  "board": "milan",
+  "api_version": 8,
+  "enable_ramdisk": true,
+  "build_selinux": false,
+  "build_seccomp": false,
+  "inherit": [ "productdefine/common/inherit/rich.json", "productdefine/common/inherit/chipset_common.json" ],
+  "subsystems": [
+    {
+      "subsystem": "security",
+      "components": [
+        {
+          "component": "selinux",
+          "features": []
+        }
+      ]
+    },
+    {
+      "subsystem": "communication",
+      "components": [
+        {
+          "component": "netmanager_ext",
+          "features": []
+        }
+      ]
+    },
+    {
+      "subsystem": "graphic",
+      "components": [
+        {
+          "component": "graphic_standard",
+          "features": [
+            "graphic_standard_feature_ace_enable_gpu = false",
+            "graphic_standard_feature_rs_enable_eglimage = false"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "qualcomm_products",
+      "components": [
+        {
+          "component": "qualcomm_products",
+          "features": []
+        }
+      ]
+    },
+    {
+      "subsystem": "arkui",
+      "components": [
+        {
+          "component": "ace_engine",
+          "features": [
+            "ace_engine_feature_enable_accessibility = true",
+            "ace_engine_feature_enable_web = true"
+          ]
+        },
+        {
+          "component": "ui_appearance",
+          "features": []
+        }
+      ]
+    },
+    {
+      "subsystem": "wpa_supplicant-2.9",
+      "components": [
+        {
+          "component": "wpa_supplicant-2.9",
+          "features": [
+            "wpa_supplicant_driver_nl80211 = true"
+          ]
+        }
+      ]
+    },
+    {
+      "subsystem": "hdf",
+      "components": [
+        {
+          "component": "drivers_interface_audio",
+          "features": []
+        },
+        {
+          "component": "drivers_peripheral_audio",
+          "features": [
+            "drivers_peripheral_audio_full_test_suite = true",
+            "drivers_peripheral_audio_alsa_lib = false"
+          ]
+        }
+      ]
+    },
+    {
+      "component": "drivers_peripheral_codec",
+      "features": [
+        "drivers_peripheral_codec_support_omx = false"
+      ]
+    },
+    {
+      "subsystem": "startup",
+      "components": [
+        {
+          "component": "init",
+          "features": [
+            "enable_ohos_startup_init_feature_ab_partition = false",
+            "enable_ohos_startup_init_feature_loader = false"
+          ]
+        }
+      ]
+    }
+  ]
+}

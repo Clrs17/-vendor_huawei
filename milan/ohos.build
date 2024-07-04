@@ -1,0 +1,16 @@
+{
+  "parts": {
+    "product_milan": {
+      "module_list": [
+        "//vendor/huawei/milan/default_app_config:default_app_config",
+        "//vendor/huawei/milan/image_conf:custom_image_conf",
+        "//vendor/huawei/milan/preinstall-config:preinstall-config",
+        "//vendor/huawei/milan/resourceschedule:resourceschedule",
+        "//vendor/huawei/milan/etc:product_etc_conf",
+        "//vendor/huawei/milan/custom_conf:custom_config",
+        "//vendor/huawei/milan/ext_service:ext_service_group"
+      ]
+    }
+  },
+  "subsystem": "product_huawei"
+}
